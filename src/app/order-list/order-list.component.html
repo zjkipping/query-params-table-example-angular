@@ -1,0 +1,34 @@
+<table class="striped centered">
+  <thead>
+    <tr>
+      <td class="header center-align" (click)="changeSortBy('orderID')"> Order ID
+        <i *ngIf="options.sortBy === 'orderID'" class="material-icons orderby">
+          {{ options.order === 'asc' ? 'arrow_drop_down' : 'arrow_drop_up' }}
+        </i>
+      </td>
+      <td class="header center-align" (click)="changeSortBy('customerID')"> Customer ID
+        <i *ngIf="options.sortBy === 'customerID'" class="material-icons orderby">
+          {{ options.order === 'asc' ? 'arrow_drop_down' : 'arrow_drop_up' }}
+        </i>
+      </td>
+      <td class="header center-align" (click)="changeSortBy('customerName')"> Customer Name
+        <i *ngIf="options.sortBy === 'customerName'" class="material-icons orderby">
+          {{ options.order === 'asc' ? 'arrow_drop_down' : 'arrow_drop_up' }}
+        </i>
+      </td>
+      <td class="header center-align" (click)="changeSortBy('itemCount')"> Item Count
+        <i *ngIf="options.sortBy === 'itemCount'" class="material-icons orderby">
+          {{ options.order === 'asc' ? 'arrow_drop_down' : 'arrow_drop_up' }}
+        </i>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.orderID }}</td>
+      <td>{{ order.customerID }}</td>
+      <td>{{ order.customerName }}</td>
+      <td>{{ order.itemCount }}</td>
+    </tr>
+  </tbody>
+</table>

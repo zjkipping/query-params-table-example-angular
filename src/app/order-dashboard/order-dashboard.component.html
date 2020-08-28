@@ -1,0 +1,2 @@
+<app-order-search [options]="ordersService.tableOptions$ | async"></app-order-search>
+<app-order-list [orders]="ordersService.orders$ | async" [options]="ordersService.tableOptions$ | async"></app-order-list>
